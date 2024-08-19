@@ -9,5 +9,26 @@ dict_alpha = {row.letter: row.code for (index, row) in alphabet.iterrows()}
 #TODO 2. Create a list of the phonetic code words from a word that the user inputs.
 name = input("input your name: ").upper()
 
-phonetic_code_words = [dict_alpha[letter] for letter in name]
-print(phonetic_code_words)
+# 1. option with handling KeyError
+while KeyError:
+    try:
+        phonetic_code_words = [dict_alpha[letter] for letter in name]
+    except KeyError:
+        print("Input just a letters")
+        name = input("input your name: ").upper()
+    else:
+        print(phonetic_code_words)
+        exit()
+
+
+# 2. option with handling KeyError
+def generate_phonetic():
+    name = input("input your name: ").upper()
+    try:
+        phonetic_code_words = [dict_alpha[letter] for letter in name]
+    except KeyError:
+        print("Input just a letters")
+    else:
+        print(phonetic_code_words)
+
+generate_phonetic()
