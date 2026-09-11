@@ -1,0 +1,36 @@
+Przejscie do folderu 
+cd /Users/emiliawach/Desktop/python 
+
+Lista plików 
+ls
+
+Nowy plik
+touch chapter1.txt
+
+Nowy folder
+mkdir day-70
+
+Przeniesienie pliku
+mv chapter1.txt day-70
+
+Wejscie do folderu
+cd day-70
+
+Inicjacja repozytorium git
+git init 
+
+Otwarcie pliku
+open -a TextEdit chapter1.txt 
+
+Status repozytorium
+Git status
+
+Dodanie zmian
+Git add .
+
+Commitowanie
+git commit -m "Complete Chapter 1"
+
+Usuwanie zmian 
+git checkout chapter3.txt
+
