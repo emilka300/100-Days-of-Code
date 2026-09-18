@@ -54,3 +54,60 @@ Git merge alien-plot
 git status = „Co się dzieje TERAZ w moim repo?”
 git log = „Co wydarzyło się W HISTORII repo?”
 
+
+Cofanie commitów
+1. Cofnięcie ostatniego commita, ale zachowanie zmian
+git reset --soft HEAD~1
+usuwa ostatni commit z historii
+nie usuwa zmian w plikach
+zmiany zostają przygotowane do ponownego commita (staged)
+Przydatne, gdy np. zrobiłam commit i dopiero potem zauważyłam, że dodałam niepotrzebne pliki.
+Jak nie dodać konkretnego folderu do commita?
+Jeśli zrobiłam:
+git add .
+i przez przypadek dodał się np. folder project/, mogę go wyjąć ze stagingu:
+git restore --staged project/
+Folder nadal będzie na komputerze, ale nie będzie częścią następnego commita.
+Potem:
+git status
+i sprawdzam, czy w Changes to be committed są tylko pliki, które chcę zapisać.
+Ważne
+Jeżeli project/ znajduje się w:
+Untracked files:
+    project/
+to nie jest częścią commita.
+Nie robię wtedy ponownie:
+git add .
+bo git add . znowu doda project/.
+Jak dodać tylko konkretne pliki?
+Zamiast:
+git add .
+mogę wskazać konkretne pliki:
+git add chapter1.txt chapter2.txt chapter3.txt
+albo:
+git add chapter1.txt
+Dzięki temu mam większą kontrolę nad tym, co trafi do commita.
+Przydatna kolejność
+Przed commitem:
+git status
+Potem dodaję wybrane pliki:
+git add chapter1.txt chapter2.txt
+Sprawdzam:
+git status
+I dopiero wtedy:
+git commit -m "Opis zmian"
+Zapamiętaj
+git status
+→ co się teraz dzieje?
+
+git add
+→ co chcę przygotować do commita?
+
+git commit
+→ zapisuję przygotowane zmiany w historii
+
+git reset --soft HEAD~1
+→ cofam ostatni commit, ale zachowuję zmiany
+
+git restore --staged plik/folder
+→ wyjmuję plik/folder z przygotowanego commita
