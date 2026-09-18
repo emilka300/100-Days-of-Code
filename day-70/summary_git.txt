@@ -34,3 +34,19 @@ git commit -m "Complete Chapter 1"
 Usuwanie zmian 
 git checkout chapter3.txt
 
+Klonowanie repo
+git clone https://github.com/inolen/quakejs.git
+Ścieżke biorę przy przycisku codę i tam jest strzałka
+
+Tworzenie branch
+git branch alien-plot
+
+Sprawdzanie barnchy
+git branch
+
+Przejscie na nowego bancha
+git checkout alien-plot
+
+
+
+
