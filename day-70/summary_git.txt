@@ -47,6 +47,10 @@ git branch
 Przejscie na nowego bancha
 git checkout alien-plot
 
+Mozna mergowac branch jesli zmiany na alien-plot były zacommitowane i wrócę do main i wtedy 
+Git merge alien-plot
 
 
+git status = „Co się dzieje TERAZ w moim repo?”
+git log = „Co wydarzyło się W HISTORII repo?”
 
